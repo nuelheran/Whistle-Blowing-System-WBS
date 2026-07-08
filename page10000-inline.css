@@ -1,0 +1,230 @@
+/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------ GLOBAL STYLE (aurora body) ------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: radial-gradient(1100px 700px at 8% -12%, rgba(45,212,191,0.30), transparent 60%), radial-gradient(1000px 650px at 108% 8%, rgba(34,211,238,0.24), transparent 55%), radial-gradient(900px 900px at 50% 118%, rgba(13,148,136,0.22), transparent 62%), linear-gradient(160deg, #071a1e 0%, #0b2b30 45%, #0d3a3d 100%) !important;
+  background-attachment: fixed !important;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+.container {
+  max-width: 1280px;
+}
+/* -------------------------------------------------------------------------------------------- */
+/* --------------------- Page Title bar (t_Body_title) - transparent over aurora --------------------- */
+.t-Body-title {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+  padding: 10px 14px 0 14px !important;
+}
+.t-BreadcrumbRegion {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.t-Breadcrumb-item a.t-Breadcrumb-label {
+  color: rgba(203,236,231,0.75) !important;
+}
+.t-Breadcrumb-item a.t-Breadcrumb-label:hover {
+  color: #7df3e1 !important;
+}
+.t-Breadcrumb-item.is-active .t-Breadcrumb-label {
+  color: #2dd4bf !important;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(45,212,191,0.35);
+}
+/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------ REGION CARD (dark liquid glass) ------------------------------ */
+.t-Region {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  overflow: visible !important;
+  margin-bottom: 18px;
+}
+.t-Region-bodyWrap {
+  background: linear-gradient(160deg, rgba(13,42,45,0.50) 0%, rgba(7,24,28,0.66) 100%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(1.6);
+  backdrop-filter: blur(28px) saturate(1.6);
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 26px 55px -18px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.18) !important;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.t-Region-bodyWrap:hover {
+  border-color: rgba(45,212,191,0.35) !important;
+}
+.t-Region-header {
+  background: transparent !important;
+  border-bottom: none !important;
+  padding: 12px 4px !important;
+}
+.t-Region-header .t-Region-title,
+.t-Region .t-Region-title {
+  color: #eafffb !important;
+  text-shadow: 0 0 14px rgba(45,212,191,0.4);
+}
+/* Nested regions (reports inside Access Control / Feedback cards) stay flat */
+.t-Region .t-Region .t-Region-bodyWrap {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-radius: 0 !important;
+}
+/* "Add User" header button - ghost glass */
+.t-Region-header .t-Button--noUI {
+  color: #7df3e1 !important;
+  background: rgba(45,212,191,0.10) !important;
+  border: 1px solid rgba(45,212,191,0.25) !important;
+}
+.t-Region-header .t-Button--noUI:hover {
+  background: rgba(45,212,191,0.25) !important;
+  color: white !important;
+}
+/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------ MEDIA LISTS (admin menu links) ------------------------------ */
+.t-MediaList {
+  background: transparent !important;
+}
+.t-MediaList-item {
+  border-color: rgba(255,255,255,0.08) !important;
+  background: transparent !important;
+}
+.t-MediaList-itemWrap {
+  background: transparent !important;
+  transition: all 0.2s ease;
+}
+.t-MediaList-itemWrap:hover,
+.t-MediaList-itemWrap:focus {
+  background: rgba(45,212,191,0.10) !important;
+}
+.t-MediaList-title {
+  color: #eafffb !important;
+  text-shadow: 0 0 10px rgba(45,212,191,0.25);
+}
+.t-MediaList-desc {
+  color: rgba(167,220,212,0.75) !important;
+}
+/* Icon chips - teal glass (override the u-colors palette) */
+.t-MediaList-icon,
+.t-MediaList--showIcons.u-colors .t-MediaList-icon .t-Icon,
+.u-colors .u-color {
+  background: rgba(45,212,191,0.14) !important;
+  color: #7df3e1 !important;
+  border-radius: 12px;
+}
+.t-MediaList-itemWrap:hover .t-MediaList-icon {
+  background: rgba(45,212,191,0.28) !important;
+  box-shadow: 0 0 16px rgba(45,212,191,0.3);
+}
+.t-MediaList-badge {
+  background: rgba(45,212,191,0.18);
+  color: #7df3e1;
+}
+/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------ AVP LISTS (User Counts / Feedback report) ------------------------------ */
+.t-AVPList {
+  background: transparent !important;
+}
+.t-AVPList-label {
+  color: rgba(167,220,212,0.8) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  background: transparent !important;
+}
+.t-AVPList-value {
+  color: #eafffb !important;
+  font-weight: 600;
+  border-color: rgba(255,255,255,0.08) !important;
+  background: transparent !important;
+}
+/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------ ALERT (ACL Information) - amber glass ------------------------------ */
+.t-Alert--warning.t-Alert--colorBG {
+  background: rgba(245,158,11,0.14) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245,158,11,0.35) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12) !important;
+}
+.t-Alert--warning.t-Alert--colorBG .t-Alert-title,
+.t-Alert--warning.t-Alert--colorBG .t-Alert-body {
+  color: #fde8c0 !important;
+}
+/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------ CUSTOM SCROLLBAR (dark neon) ------------------------------ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(7,26,30,0.45);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #14b8a6, #22d3ee);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2dd4bf, #22d3ee);
+}
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* ------------------- CLASSIC REPORT: User Counts (#user-counts-report) ------------------- */
+/* -------------------------------------------------------------------------------------------- */
+#user-counts-report .t-AVPList {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0;
+  padding: 6px 8px;
+  background: transparent !important;
+}
+/* Label cells */
+#user-counts-report .t-AVPList-label {
+  color: rgba(167,220,212,0.85) !important;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+  padding: 12px 10px !important;
+  margin: 0;
+  text-align: left !important;
+}
+/* Value cells - teal glass pill */
+#user-counts-report .t-AVPList-value {
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+  padding: 8px 10px !important;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+#user-counts-report .t-AVPList-label:first-of-type,
+#user-counts-report .t-AVPList-value:first-of-type {
+  border-top: none !important;
+}
+#user-counts-report .t-AVPList-value {
+  color: #7df3e1 !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(45,212,191,0.35);
+}
+/* Empty pagination table transparent */
+#user-counts-report .t-Report-pagination {
+  background: transparent !important;
+}
+/* -------------------------------------------------------------------------------------------- */
