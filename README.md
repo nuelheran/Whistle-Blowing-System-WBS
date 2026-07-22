@@ -52,31 +52,6 @@ To explore the case-management side (report list, case detail, investigation wor
 - **PL/SQL** for business logic and workflow
 - Custom **CSS** (glassmorphism theme on APEX's *Vita* theme style)
 
-## 📦 Repository Contents
-
-| File | Description |
-|---|---|
-| `WBS-Portfolio-install.sql` | Full APEX application export — import this to install the app. |
-| `wbs-sample-data.sql` | Sample/demo report data covering every workflow status. |
-| `glass-theme.css` | App-wide glassmorphism stylesheet (also bundled inside the export). |
-| `*-inline.css` | Page-level styles for the landing, login, and individual pages. |
-| `app-icon-512.png` | 512px app/PWA icon preview. |
-
-## 🚀 Installation
-
-1. Log in to any **Oracle APEX 23.2+** workspace (e.g. a free workspace at [apex.oracle.com](https://apex.oracle.com)).
-2. **App Builder → Import** → choose `WBS-Portfolio-install.sql` (File type: *Database Application*).
-3. Keep or override the App ID and parsing schema during install.
-4. Install the **Supporting Objects** when prompted — this creates the `XTD_WBS` / `XTD_WBS_BLOB` tables, triggers, and sequences automatically.
-5. (Optional) Run `wbs-sample-data.sql` in **SQL Workshop → SQL Scripts** to load demo reports.
-6. Create at least one workspace user and assign a role via **Administration → Manage User Access**, then open the app.
-
-### After import
-
-- **Email:** update the Page 0 items `P0_EMAIL_FROM`, `P0_EMAIL_TO`, `P0_EMAIL_ADMIN`, and `P0_LOGIN_LINK` to match your environment. On apex.oracle.com, mail only sends to your own verified address.
-- **Access control:** assign users an ACL role (Administrator / Contributor / Reader).
-- **Browser support:** `backdrop-filter` needs a modern browser (Chrome / Edge / Safari, Firefox 103+). Older browsers fall back to translucent colors without blur.
-
 ## 🗺 Main Pages
 
 | Page | Purpose |
